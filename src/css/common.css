@@ -16,3 +16,59 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.btn-wrapper button[data-start], 
+.btn-wrapper button[data-stop] {
+
+  width: 100px;
+  height: 40px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  border: none;
+  color: #212121;
+  font-size: 24px;
+  font-variant: small-caps;
+  text-transform: lowercase
+}
+
+.btn-wrapper button[data-start] {
+  margin-right: 40px;
+
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  }
+
+
+.form-wrapper button[data-start] {
+    width: 70px;
+  }
+
+#datetime-picker {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.value {
+  font-size: 36px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
