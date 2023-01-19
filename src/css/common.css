@@ -17,8 +17,8 @@ img {
   max-width: 100%;
 }
 
-.btn-wrapper button[data-start], 
-.btn-wrapper button[data-stop] {
+button[data-start], 
+button[data-stop] {
 
   width: 100px;
   height: 40px;
@@ -36,6 +36,11 @@ img {
 
 }
 
+button[data-start]:disabled {
+  background-color: #fafafa;
+  color: #746f6f;
+}
+
 .btn-wrapper {
   display: flex;
   justify-content: center;
@@ -44,7 +49,7 @@ img {
 
 
 .form-wrapper button[data-start] {
-    width: 70px;
+    width: 100px;
   }
 
 #datetime-picker {

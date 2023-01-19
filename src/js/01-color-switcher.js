@@ -9,10 +9,10 @@ startBtn.addEventListener('click', onStartClick);
 stopBtn.addEventListener('click', onStopClick);
 
 function onStartClick() {
+    startBtn.setAttribute("disabled", "disabled");
     timerId = setInterval(() => {
         const bcgColor = getRandomHexColor();
         bodyEl.style.backgroundColor = bcgColor;
-        startBtn.setAttribute("disabled", "disabled");
     }, 1000)
 }
 

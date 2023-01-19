@@ -28,7 +28,6 @@ flatpickr('#datetime-picker', {
             return;
         }
         finishTime = selectedDates[0].getTime();
-        console.log(finishTime);
     },
 });
 
@@ -42,18 +41,23 @@ function onStartClick() {
 
 
 const timer = {
-    start() {
-        this.tick();
-        setInterval(this.tick, 1000);
+    timerId: null,
 
+    start() {
+        this.timerId = setInterval(this.tick.bind(this), 1000);
+        this.tick();
     },
 
     tick() {
+        console.log('tick', this.timerId)
         const currentTime = Date.now();
         const timeFlow = finishTime - currentTime;
         const timeObj = convertMs(timeFlow);
-        console.log(timeObj);
         updateHTML(timeObj);
+        if (timeFlow <= 0) {
+            console.log('Finish', this.timerId)
+            clearInterval(this.timerId);
+        }
     }
 }
 
