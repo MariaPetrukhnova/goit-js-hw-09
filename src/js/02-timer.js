@@ -54,7 +54,7 @@ const timer = {
         const timeFlow = finishTime - currentTime;
         const timeObj = convertMs(timeFlow);
         updateHTML(timeObj);
-        if (timeFlow < 900) {
+        if (timeFlow < 1000) {
             console.log('Finish', this.timerId)
             clearInterval(this.timerId);
         }
